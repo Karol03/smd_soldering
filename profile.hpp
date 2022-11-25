@@ -95,7 +95,6 @@ public:
     {
         m_isStopped = true;
         digitalWrite(RELAY, LOW);
-        led_blink(COLOR_RED, true);
     }
 
     inline const Stat_t& stats() const

@@ -179,6 +179,10 @@ inline void menu_main(void*)
     else if (!profile.is_stopped())
     {
         profile.stop();
+        if (!profile.is_cold())
+        {
+            led_blink(COLOR_RED, true);
+        }
     }
     else if (!profile.is_cold())
     {
